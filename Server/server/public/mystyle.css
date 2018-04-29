@@ -1,0 +1,17 @@
+body {
+    background: lightblue;
+}
+
+p {
+    background-color: green;
+    border: solid 1px red;
+}
+
+#absatz2 {
+    border: solid 3px black;
+}
+
+.gelbeAbsaetzte{
+
+    background-color: blue;
+}

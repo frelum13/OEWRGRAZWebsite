@@ -1,0 +1,21 @@
+{
+  "name": "ue11",
+  "version": "1.0.0",
+  "description": "5AHME ue011 HTTP Server mit Angular",
+  "repository": {},
+  "scripts": {
+    "clean": "cd server; rm -rf dist; cd ../ngx; rm -rf dist",
+    "build": "npm run builds; npm run buildc",
+    "builds": "cd server; ./node_modules/gulp/bin/gulp.js build",
+    "buildc": "cd oewrgraz; ng build --prod --output-hashing none",
+    "prestart": "npm run build",
+    "start": "cd server; node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "frelum13",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "@angular/cli": "^1.7.4"
+  }
+}
