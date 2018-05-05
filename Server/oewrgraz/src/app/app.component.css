@@ -1,0 +1,10 @@
+a img {vertical-align:middle}
+#text {vertical-align:top}
+
+.wrapper {
+    align-items: center;
+}
+
+#navbar {
+    background-color: #ebece9;
+}

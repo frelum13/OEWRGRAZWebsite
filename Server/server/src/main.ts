@@ -29,7 +29,6 @@ class Main {
         const ngxPath = path.join(__dirname, '../../oewrgraz/dist');
 
         this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartup(req, res, next));
-        this._express.get('/error', (req, res, next) => this.handleGetError(req, res, next));
         this._express.use(express.static(ngxPath));
         this._express.use(
             (err: any,
@@ -43,28 +42,10 @@ class Main {
         console.log('Server now listening (http://localhost:' + this._config.port + ')');
     }
 
-    private handleGetAll (req: express.Request, res: express.Response, next: express.NextFunction) {
-        try {
-            console.log('get request from client');
-            res.send('starting angular');
-        } catch (err) {
-            next(err);
-        }
-    }
-
-
     private handleGetStartup (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
             const indexPath = path.join(__dirname, '../../oewrgraz/dist/index.html');
             res.sendFile(indexPath);
-        } catch (err) {
-            next(err);
-        }
-    }
-
-    private handleGetError (req: express.Request, res: express.Response, next: express.NextFunction) {
-        try {
-            throw new Error('Test');
         } catch (err) {
             next(err);
         }

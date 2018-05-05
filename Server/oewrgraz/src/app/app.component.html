@@ -1,16 +1,33 @@
-<p>Mein Name ist Lukas Freyler</p>
+<div class="wrapper">
+  <form  action="https://de-de.facebook.com/OsterreichischeWasserrettungBezirksstelleGraz/" target="_blank">
+    <input type="image" src="http://chittagongit.com//images/facebook-icon-png-circle/facebook-icon-png-circle-9.jpg" alt="Submit" width="48" height="48">
+  </form>
+</div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #ebece9;">
-  <a class="navbar-brand" href="#">                  
-    
-    <img src="http://www.ooe.owr.at/user/Download/logos/OWR-Abziehbild.svg" width="60" height="60" class="d-inline-block align-top" alt="123"> Österreichische Wasserretung Graz
+<nav id = "navbar" class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="navbar-brand" href="#"><img src="http://www.ooe.owr.at/user/Download/logos/OWR-Abziehbild.svg" width="60" height="60" alt="ÖWR logo"> 
+    <a id = "bild">Österreichische Wasserretung Graz</a>
   </a>
-  
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-      </div>
-    </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/kontakt">Kontakt</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/ausbildung">Ausbildung</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/here">..</a>
+        </li>
+    </ul>
+</div>
 </nav>
+
+<router-outlet></router-outlet>
+
