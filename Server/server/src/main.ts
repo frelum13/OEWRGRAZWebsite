@@ -26,7 +26,7 @@ class Main {
         // const pugRenderingEngine = this._server.set('view engine', 'pug');
         // pugRenderingEngine.locals.pretty = true;
 
-        const ngxPath = path.join(__dirname, '../../oewrgraz/dist');
+        const ngxPath = path.join(__dirname, '../../owr/dist');
 
         this._express.get(['/', '/index.html', '/index.htm'], (req, res, next) => this.handleGetStartup(req, res, next));
         this._express.use(express.static(ngxPath));
@@ -44,7 +44,7 @@ class Main {
 
     private handleGetStartup (req: express.Request, res: express.Response, next: express.NextFunction) {
         try {
-            const indexPath = path.join(__dirname, '../../oewrgraz/dist/index.html');
+            const indexPath = path.join(__dirname, '../../owr/dist/index.html');
             res.sendFile(indexPath);
         } catch (err) {
             next(err);

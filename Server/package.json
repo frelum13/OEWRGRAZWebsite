@@ -5,9 +5,9 @@
   "repository": {},
   "scripts": {
     "clean": "cd server; rm -rf dist; cd ../ngx; rm -rf dist",
-    "build": "npm run builds; npm run buildc",
-    "builds": "cd server; ./node_modules/gulp/bin/gulp.js build",
-    "buildc": "cd oewrgraz; ng build --prod --output-hashing none",
+    "build": "npm run builds; npm run buildc;",
+    "builds": "cross-env NODE_PATH=./server; cross-env NODE_PATH=./node_modules/gulp/bin/gulp.js build",
+    "buildc": "cd owr; ng build --prod --output-hashing none",
     "prestart": "npm run build",
     "start": "cd server; node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
